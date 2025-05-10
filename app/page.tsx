@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Share2 } from "lucide-react"
 
 export default function DevotionalPage() {
-  const currentDate = new Date().toLocaleDateString("en-US", {
+  const currentDate = new Date().toLocaleDateString("pt-BR", {
     weekday: "long",
     year: "numeric",
     month: "long",
