@@ -21,7 +21,7 @@ export default function Navigation() {
           }`}
         >
           <BookOpen className="h-5 w-5" />
-          <span className="text-xs mt-1">Devotional</span>
+          <span className="text-xs mt-1">Devocional</span>
         </Link>
         <Link
           href="/quiz"
@@ -48,7 +48,7 @@ export default function Navigation() {
           }`}
         >
           <User className="h-5 w-5" />
-          <span className="text-xs mt-1">Account</span>
+          <span className="text-xs mt-1">Conta</span>
         </Link>
       </div>
     </div>

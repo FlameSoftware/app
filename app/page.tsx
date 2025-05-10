@@ -13,7 +13,7 @@ export default function DevotionalPage() {
   return (
     <div className="p-4 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Daily Devotional</h1>
+        <h1 className="text-2xl font-bold">Devocional Diário</h1>
         <div className="text-sm text-muted-foreground">{currentDate}</div>
       </div>
 
@@ -21,7 +21,7 @@ export default function DevotionalPage() {
         <Button variant="outline" size="icon">
           <ChevronLeft className="h-4 w-4" />
         </Button>
-        <span className="text-sm font-medium">Today</span>
+        <span className="text-sm font-medium">Hoje</span>
         <Button variant="outline" size="icon">
           <ChevronRight className="h-4 w-4" />
         </Button>
@@ -29,16 +29,15 @@ export default function DevotionalPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Finding Peace in Troubled Times</CardTitle>
-          <CardDescription>John 14:27</CardDescription>
+          <CardTitle>Achando Paz em tempos difíceis</CardTitle>
+          <CardDescription>João 14:27</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="p-4 bg-accent/20 rounded-md">
             <p className="italic">
-              "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your
-              hearts be troubled and do not be afraid."
+              "Deixo com vocês a paz, a minha paz lhes dou; não lhes dou a paz como o mundo a dá. Que o coração de vocês não fique angustiado nem com medo.""
             </p>
-            <p className="text-right text-sm mt-2">- John 14:27</p>
+            <p className="text-right text-sm mt-2">- João 14:27</p>
           </div>
 
           <div className="aspect-video bg-muted rounded-md overflow-hidden relative">
@@ -62,19 +61,19 @@ export default function DevotionalPage() {
 
           <div className="prose prose-sm max-w-none">
             <p>
-              In today's devotional, we explore how Jesus offers us a peace that transcends our circumstances. Unlike
-              the temporary peace the world offers, Christ's peace is eternal and sustaining.
+              No devocional de hoje, exploramos como Jesus nos oferece uma paz que transcende nossas circunstâncias. Ao contrário
+              da paz temporária que o mundo oferece, a paz de Cristo é eterna e sustentadora.
             </p>
             <p>
-              When we face challenges, this verse reminds us that we don't need to let our hearts be troubled. Instead,
-              we can rest in the peace that Jesus freely gives to all who trust in Him.
+              Quando enfrentamos desafios, este versículo nos lembra que não precisamos deixar nossos corações se perturbarem. Em vez disso,
+              podemos descansar na paz que Jesus concede gratuitamente a todos os que confiam nEle.
             </p>
           </div>
 
           <div className="flex justify-end">
             <Button variant="outline" size="sm">
               <Share2 className="h-4 w-4 mr-2" />
-              Share
+              Compartilhar
             </Button>
           </div>
         </CardContent>
@@ -82,13 +81,13 @@ export default function DevotionalPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Reflection Questions</CardTitle>
+          <CardTitle>Reflexões</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <p className="font-medium">1. How have you experienced God's peace in difficult situations?</p>
-            <p className="font-medium">2. What worries can you surrender to God today?</p>
-            <p className="font-medium">3. How can you share God's peace with someone this week?</p>
+            <p className="font-medium">1. Como você tem experimentado a Paz de Deus em tempos difíceis?</p>
+            <p className="font-medium">2. Quais preocupações você pode render a Deus hoje?</p>
+            <p className="font-medium">3. Como você pode compartilhar a Paz de Deus com alguém essa semana?</p>
           </div>
         </CardContent>
       </Card>

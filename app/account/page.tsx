@@ -16,7 +16,7 @@ export default function AccountPage() {
 
   return (
     <div className="p-4 space-y-6">
-      <h1 className="text-2xl font-bold">Account</h1>
+      <h1 className="text-2xl font-bold">Conta</h1>
 
       {isLoggedIn ? <UserProfile setIsLoggedIn={setIsLoggedIn} /> : <AuthForms setIsLoggedIn={setIsLoggedIn} />}
     </div>
@@ -27,14 +27,14 @@ function AuthForms({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => void 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Welcome</CardTitle>
-        <CardDescription>Sign in to track your progress and join the community</CardDescription>
+        <CardTitle>Bem-vindo</CardTitle>
+        <CardDescription>Faça login para acompanhar o seu progresso e se juntar a comunidade!</CardDescription>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="signin" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="signin">Sign In</TabsTrigger>
-            <TabsTrigger value="signup">Sign Up</TabsTrigger>
+            <TabsTrigger value="signin">Entrar</TabsTrigger>
+            <TabsTrigger value="signup">Cadastrar</TabsTrigger>
           </TabsList>
 
           <TabsContent value="signin" className="space-y-4 mt-4">
@@ -44,21 +44,21 @@ function AuthForms({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => void 
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <Label htmlFor="password-signin">Password</Label>
+                <Label htmlFor="password-signin">Senha</Label>
                 <Button variant="link" className="p-0 h-auto text-xs">
-                  Forgot password?
+                  Esqueceu sua senha?
                 </Button>
               </div>
               <Input id="password-signin" type="password" />
             </div>
             <Button className="w-full" onClick={() => setIsLoggedIn(true)}>
-              Sign In
+              Entrar
             </Button>
           </TabsContent>
 
           <TabsContent value="signup" className="space-y-4 mt-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name">Nome completo</Label>
               <Input id="name" placeholder="John Doe" />
             </div>
             <div className="space-y-2">
@@ -66,15 +66,15 @@ function AuthForms({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => void 
               <Input id="email-signup" type="email" placeholder="m@example.com" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password-signup">Password</Label>
+              <Label htmlFor="password-signup">Senha</Label>
               <Input id="password-signup" type="password" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="confirm-password">Confirm Password</Label>
+              <Label htmlFor="confirm-password">Confirmar senha</Label>
               <Input id="confirm-password" type="password" />
             </div>
             <Button className="w-full" onClick={() => setIsLoggedIn(true)}>
-              Create Account
+              Criar conta
             </Button>
           </TabsContent>
         </Tabs>
@@ -100,7 +100,7 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
               </div>
             </div>
             <Button variant="outline" onClick={() => setIsLoggedIn(false)}>
-              Sign Out
+              Sair
             </Button>
           </div>
         </CardHeader>
@@ -109,16 +109,16 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Trophy className="h-5 w-5 text-muted-foreground" />
-                <span>Current Rank:</span>
+                <span>Posição atual:</span>
               </div>
               <Badge variant="outline" className="text-sm">
-                4th Place
+                4o lugar
               </Badge>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Medal className="h-5 w-5 text-muted-foreground" />
-                <span>Total Points:</span>
+                <span>Pontuação total:</span>
               </div>
               <Badge variant="outline" className="text-sm">
                 1,250 pts
@@ -127,7 +127,7 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <BookOpen className="h-5 w-5 text-muted-foreground" />
-                <span>Quizzes Completed:</span>
+                <span>Quizzes completos:</span>
               </div>
               <Badge variant="outline" className="text-sm">
                 24
@@ -139,7 +139,7 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
 
       <Card>
         <CardHeader>
-          <CardTitle>Recent Achievements</CardTitle>
+          <CardTitle>Conquistas recentes</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -148,8 +148,8 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
                 <Trophy className="h-6 w-6 text-primary" />
               </div>
               <div className="flex-1 space-y-1">
-                <p className="font-medium">Perfect Score</p>
-                <p className="text-sm text-muted-foreground">Achieved 100% on the Book of Psalms quiz</p>
+                <p className="font-medium">Pontuação perfeita</p>
+                <p className="text-sm text-muted-foreground">Alcançou 100% no Quiz de Salmos</p>
               </div>
               <Badge className="bg-accent text-accent-foreground">+100 pts</Badge>
             </div>
@@ -161,8 +161,8 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
                 <BookOpen className="h-6 w-6 text-primary" />
               </div>
               <div className="flex-1 space-y-1">
-                <p className="font-medium">Consistent Student</p>
-                <p className="text-sm text-muted-foreground">Completed 5 consecutive weekly quizzes</p>
+                <p className="font-medium">Estudante Consistente</p>
+                <p className="text-sm text-muted-foreground">Completou 5 quizzes semanais consecutivos</p>
               </div>
               <Badge className="bg-accent text-accent-foreground">+50 pts</Badge>
             </div>
@@ -174,8 +174,8 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
                 <Medal className="h-6 w-6 text-primary" />
               </div>
               <div className="flex-1 space-y-1">
-                <p className="font-medium">Top 5 Ranking</p>
-                <p className="text-sm text-muted-foreground">Reached top 5 on the weekly leaderboard</p>
+                <p className="font-medium">Top 5 na liderança</p>
+                <p className="text-sm text-muted-foreground">Alcançou o top 5 na liderança semanal</p>
               </div>
               <Badge className="bg-accent text-accent-foreground">+75 pts</Badge>
             </div>
@@ -185,11 +185,11 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
 
       <Card>
         <CardHeader>
-          <CardTitle>Account Settings</CardTitle>
+          <CardTitle>Configurações da conta</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="display-name">Display Name</Label>
+            <Label htmlFor="display-name">Nome de visualização</Label>
             <Input id="display-name" defaultValue="John Doe" />
           </div>
           <div className="space-y-2">
@@ -197,16 +197,16 @@ function UserProfile({ setIsLoggedIn }: { setIsLoggedIn: (value: boolean) => voi
             <Input id="email" type="email" defaultValue="john.doe@example.com" />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="new-password">New Password</Label>
+            <Label htmlFor="new-password">Nova senha</Label>
             <Input id="new-password" type="password" />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="confirm-new-password">Confirm New Password</Label>
+            <Label htmlFor="confirm-new-password">Confirmar senha</Label>
             <Input id="confirm-new-password" type="password" />
           </div>
         </CardContent>
         <CardFooter>
-          <Button>Save Changes</Button>
+          <Button>Salvar alterações</Button>
         </CardFooter>
       </Card>
     </div>

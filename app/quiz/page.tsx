@@ -16,43 +16,43 @@ export default function QuizPage() {
   const [quizCompleted, setQuizCompleted] = useState(false)
 
   const quizData = {
-    title: "Book of Romans - Week 3",
-    description: "Test your knowledge on Romans chapters 5-8",
+    title: "Livro de Romanos - Semana 3",
+    description: "Teste seus conhecimentos sobre os capítulos 5 a 8 de Romanos",
     questions: [
       {
-        question: "According to Romans 5:1, what do we have through faith?",
-        options: ["Eternal life", "Peace with God", "Salvation", "Wisdom"],
-        correctAnswer: "Peace with God",
+        question: "De acordo com Romanos 5:1, o que temos por meio da fé?",
+        options: ["Vida eterna", "Paz com Deus", "Salvação", "Sabedoria"],
+        correctAnswer: "Paz com Deus",
       },
       {
-        question: "In Romans 6:23, what is the gift of God?",
-        options: ["Eternal life in Christ Jesus", "Forgiveness of sins", "The Holy Spirit", "Grace and mercy"],
-        correctAnswer: "Eternal life in Christ Jesus",
+        question: "Em Romanos 6:23, qual é o dom de Deus?",
+        options: ["Vida eterna em Cristo Jesus", "Perdão dos pecados", "O Espírito Santo", "Graça e misericórdia"],
+        correctAnswer: "Vida eterna em Cristo Jesus",
       },
       {
-        question: "According to Romans 8:28, for whom does God work all things together for good?",
+        question: "De acordo com Romanos 8:28, para quem Deus faz todas as coisas cooperarem para o bem?",
         options: [
-          "For everyone",
-          "For those who are called according to his purpose",
-          "For the righteous",
-          "For the faithful",
+          "Para todos",
+          "Para os que são chamados segundo o seu propósito",
+          "Para os justos",
+          "Para os fiéis",
         ],
-        correctAnswer: "For those who are called according to his purpose",
+        correctAnswer: "Para os que são chamados segundo o seu propósito",
       },
       {
-        question: "In Romans 7, what does Paul say he finds himself doing?",
+        question: "Em Romanos 7, o que Paulo diz que se vê fazendo?",
         options: [
-          "Doing the good he wants to do",
-          "Following the law perfectly",
-          "Not doing the good he wants to do",
-          "Preaching to the Gentiles",
+          "Fazendo o bem que deseja fazer",
+          "Cumprindo a lei perfeitamente",
+          "Não fazendo o bem que deseja fazer",
+          "Pregando aos gentios",
         ],
-        correctAnswer: "Not doing the good he wants to do",
+        correctAnswer: "Não fazendo o bem que deseja fazer",
       },
       {
-        question: "According to Romans 8:38-39, what can separate us from the love of God?",
-        options: ["Death or life", "Angels or demons", "The present or the future", "Nothing"],
-        correctAnswer: "Nothing",
+        question: "De acordo com Romanos 8:38-39, o que pode nos separar do amor de Deus?",
+        options: ["A morte ou a vida", "Anjos ou demônios", "O presente ou o futuro", "Nada"],
+        correctAnswer: "Nada",
       },
     ],
   }
@@ -94,7 +94,7 @@ export default function QuizPage() {
   return (
     <div className="p-4 space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Weekly Quiz</h1>
+        <h1 className="text-2xl font-bold">Quiz Semanal</h1>
         <p className="text-muted-foreground">{quizData.title}</p>
       </div>
 
@@ -103,9 +103,9 @@ export default function QuizPage() {
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span>
-                Question {currentQuestion + 1} of {quizData.questions.length}
+                Pergunta {currentQuestion + 1} de {quizData.questions.length}
               </span>
-              <span>Score: {score}</span>
+              <span>Pontuação: {score}</span>
             </div>
             <Progress value={progress} className="h-2" />
           </div>
@@ -146,11 +146,11 @@ export default function QuizPage() {
             <CardFooter className="flex justify-between">
               {!isAnswered ? (
                 <Button onClick={handleCheckAnswer} disabled={!selectedAnswer} className="w-full">
-                  Check Answer
+                  Verificar Resposta
                 </Button>
               ) : (
                 <Button onClick={handleNextQuestion} className="w-full">
-                  {currentQuestion < quizData.questions.length - 1 ? "Next Question" : "See Results"}
+                  {currentQuestion < quizData.questions.length - 1 ? "Próxima Pergunta" : "Ver Resultados"}
                 </Button>
               )}
             </CardFooter>
@@ -159,7 +159,7 @@ export default function QuizPage() {
       ) : (
         <Card>
           <CardHeader>
-            <CardTitle>Quiz Completed!</CardTitle>
+            <CardTitle>Quiz Concluído!</CardTitle>
             <CardDescription>{quizData.title}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -169,16 +169,16 @@ export default function QuizPage() {
               </div>
               <p className="text-muted-foreground">
                 {score === quizData.questions.length
-                  ? "Perfect score! Amazing job!"
+                  ? "Pontuação perfeita! Trabalho incrível!"
                   : score >= quizData.questions.length * 0.7
-                    ? "Great job! You know your Bible well!"
-                    : "Good effort! Keep studying the Word!"}
+                    ? "Ótimo trabalho! Você conhece bem a Bíblia!"
+                    : "Bom esforço! Continue estudando a Palavra!"}
               </p>
             </div>
           </CardContent>
           <CardFooter>
             <Button onClick={handleRestartQuiz} className="w-full">
-              Try Again
+              Tentar Novamente
             </Button>
           </CardFooter>
         </Card>

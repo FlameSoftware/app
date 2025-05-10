@@ -11,58 +11,63 @@ export default function RankingPage() {
   // Mock data for rankings
   const rankings = {
     week: [
-      { id: 1, name: "Sarah Johnson", score: 98, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 2, name: "Michael Chen", score: 95, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 3, name: "David Wilson", score: 92, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 4, name: "Emily Rodriguez", score: 88, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 5, name: "James Taylor", score: 85, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 6, name: "Sophia Martinez", score: 82, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 7, name: "Daniel Brown", score: 78, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 8, name: "Olivia Lee", score: 75, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 9, name: "William Garcia", score: 72, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 10, name: "Ava Clark", score: 68, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 1, name: "Guilherme", score: 98, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 2, name: "Patrícia", score: 98, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 3, name: "Augusto", score: 98, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 4, name: "Dani Boy", score: 95, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 5, name: "Gustavo", score: 92, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 6, name: "Malu", score: 88, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 7, name: "Vittor", score: 85, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 8, name: "Laís", score: 82, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 9, name: "Giovanna", score: 78, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 10, name: "Heitor", score: 75, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 11, name: "Caylaine", score: 72, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 12, name: "Pedro", score: 68, avatar: "/placeholder.svg?height=40&width=40" },
     ],
     month: [
-      { id: 2, name: "Michael Chen", score: 456, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 1, name: "Sarah Johnson", score: 442, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 5, name: "James Taylor", score: 410, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 3, name: "David Wilson", score: 398, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 4, name: "Emily Rodriguez", score: 385, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 8, name: "Olivia Lee", score: 372, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 6, name: "Sophia Martinez", score: 365, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 7, name: "Daniel Brown", score: 352, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 10, name: "Ava Clark", score: 340, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 9, name: "William Garcia", score: 328, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 1, name: "Guilherme", score: 392, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 2, name: "Patrícia", score: 392, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 3, name: "Augusto", score: 392, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 4, name: "Dani Boy", score: 380, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 5, name: "Gustavo", score: 368, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 6, name: "Malu", score: 352, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 7, name: "Vittor", score: 340, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 8, name: "Laís", score: 328, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 9, name: "Giovanna", score: 312, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 10, name: "Heitor", score: 300, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 11, name: "Caylaine", score: 288, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 12, name: "Pedro", score: 272, avatar: "/placeholder.svg?height=40&width=40" }
     ],
     allTime: [
-      { id: 2, name: "Michael Chen", score: 2450, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 5, name: "James Taylor", score: 2320, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 1, name: "Sarah Johnson", score: 2280, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 8, name: "Olivia Lee", score: 2150, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 3, name: "David Wilson", score: 2080, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 4, name: "Emily Rodriguez", score: 1950, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 10, name: "Ava Clark", score: 1820, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 6, name: "Sophia Martinez", score: 1750, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 7, name: "Daniel Brown", score: 1680, avatar: "/placeholder.svg?height=40&width=40" },
-      { id: 9, name: "William Garcia", score: 1520, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 1, name: "Guilherme", score: 784, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 2, name: "Patrícia", score: 784, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 3, name: "Augusto", score: 784, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 4, name: "Dani Boy", score: 760, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 5, name: "Gustavo", score: 736, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 6, name: "Malu", score: 704, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 7, name: "Vittor", score: 680, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 8, name: "Laís", score: 656, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 9, name: "Giovanna", score: 624, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 10, name: "Heitor", score: 600, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 11, name: "Caylaine", score: 576, avatar: "/placeholder.svg?height=40&width=40" },
+      { id: 12, name: "Pedro", score: 544, avatar: "/placeholder.svg?height=40&width=40" }
     ],
   }
 
-  const currentRankings = rankings[timeFilter as keyof typeof rankings]
   const currentUserRank = 4 // Mock current user's rank
 
   return (
     <div className="p-4 space-y-6">
       <div>
-        <h1 className="text-2xl font-bold">Leaderboard</h1>
-        <p className="text-muted-foreground">See who's leading in Bible knowledge</p>
+        <h1 className="text-2xl font-bold">Painel de liderança</h1>
+        <p className="text-muted-foreground">Veja quem está liderando em conhecimento bíblico!</p>
       </div>
 
       <Tabs defaultValue="week" onValueChange={setTimeFilter}>
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="week">This Week</TabsTrigger>
-          <TabsTrigger value="month">This Month</TabsTrigger>
-          <TabsTrigger value="allTime">All Time</TabsTrigger>
+          <TabsTrigger value="week">Essa semana</TabsTrigger>
+          <TabsTrigger value="month">Último mês</TabsTrigger>
+          <TabsTrigger value="allTime">Todo o tempo</TabsTrigger>
         </TabsList>
 
         <TabsContent value="week" className="mt-4">
